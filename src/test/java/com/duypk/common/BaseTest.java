@@ -14,7 +14,14 @@ import java.time.Duration;
 public class BaseTest {
 
     public static WebDriver driver;
+    //Cac bien toan cuc chua Data Test
     public static String categoryName = "Banh Trung Thu 2023";
+    public static String abc = "";
+    public static String abc = "";
+    public static String abc = "";
+    public static String abc = "";
+    public static String abc = "";
+    public static String abc = "";
 
     //Khoi tao browser
     @BeforeMethod
@@ -56,6 +63,15 @@ public class BaseTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    //Cac ham hanh dong
+    public static void clickElement(String locator){
+        driver.findElement(By.xpath(locator)).click();
+    }
+
+    public static void sendKey(String locator, String text){
+        driver.findElement(By.xpath(locator)).sendKeys(text);
     }
 
 }
