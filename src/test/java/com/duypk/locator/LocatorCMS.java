@@ -104,7 +104,7 @@ public class LocatorCMS {
     public static String addNewProductDiscountUnit = "//input[@placeholder='Discount']/parent::div/following-sibling::div//button";
         //DiscountUnit Option
         public static String discountUnitFlat = "//a[@id='bs-select-6-0']";
-        public static String diccountUnitPercent = "//a[@id='bs-select-6-1']";
+        public static String discountUnitPercent = "//a[@id='bs-select-6-1']";
 
     public static String addNewProductQuantity = "//input[@placeholder='Quantity']";
     public static String addNewProductSKU = "//input[@placeholder='SKU']";

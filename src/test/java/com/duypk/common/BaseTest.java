@@ -2,11 +2,11 @@ package com.duypk.common;
 
 import com.duypk.locator.LocatorCMS;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.*;
 
 import java.time.Duration;
@@ -16,12 +16,28 @@ public class BaseTest {
     public static WebDriver driver;
     //Cac bien toan cuc chua Data Test
     public static String categoryName = "Banh Trung Thu 2023";
-    public static String abc = "";
-    public static String ab1c = "";
-    public static String abc2 = "";
-    public static String ab3c = "";
-    public static String a4bc = "";
-    public static String ab5c = "";
+    public static String productName = "Banh Trung Thu Kinh Do";
+    public static String brand = "CMS brand 01";
+    public static String unit = "kg";
+    public static String weight = "2.5";
+    public static String minimumPerchase = "1";
+    public static String tags = "Banh";
+    public static String galleryImageName = "setBanhtrungthu1";
+    public static String thumbnailImageName = "setBanhtrungthu2";
+    public static String videoLink = "https://www.youtube.com/channel/UCE7WDaotbqTTebyAjnPgPGA";
+    public static String color1 = "Cyan";
+    public static String color2 = "Black";
+    public static String attributes = "Size";
+    public static String unitprice = "60000";
+    public static String discountDateRange = "15-09-2023 00:00:00 to 22-09-2023 23:59:59";
+    public static String discount = "0.25";
+    public static String quantity = "10";
+    public static String sku = "KNT15729";
+    public static String ab415c1 = "";
+    public static String a4b1412c = "";
+    public static String ab5421c = "";
+
+
 
     //Khoi tao browser
     @BeforeMethod
@@ -72,6 +88,10 @@ public class BaseTest {
 
     public static void sendKey(String locator, String text){
         driver.findElement(By.xpath(locator)).sendKeys(text);
+    }
+
+    public static void enter(String locator){
+        driver.findElement(By.xpath(locator)).sendKeys(Keys.ENTER);
     }
 
 }

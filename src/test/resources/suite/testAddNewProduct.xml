@@ -2,9 +2,9 @@
 
 <suite name="Suite" verbose="1">
     <parameter name="browserName" value="Chrome"></parameter>
-    <test name="TestAddCustumer">
+    <test name="TestAddNewProduct">
         <classes>
-            <class name="com.duypk.addCategory.TestAddCategory"></class>
+            <class name="com.duypk.addNewProduct.TestAddNewProduct"></class>
         </classes>
     </test>
 </suite>
