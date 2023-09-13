@@ -17,11 +17,11 @@ public class BaseTest {
     //Cac bien toan cuc chua Data Test
     public static String categoryName = "Banh Trung Thu 2023";
     public static String abc = "";
-    public static String abc = "";
-    public static String abc = "";
-    public static String abc = "";
-    public static String abc = "";
-    public static String abc = "";
+    public static String ab1c = "";
+    public static String abc2 = "";
+    public static String ab3c = "";
+    public static String a4bc = "";
+    public static String ab5c = "";
 
     //Khoi tao browser
     @BeforeMethod
