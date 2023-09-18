@@ -33,10 +33,6 @@ public class BaseTest {
     public static String discount = "0.25";
     public static String quantity = "10";
     public static String sku = "KNT15729";
-    public static String ab415c1 = "";
-    public static String a4b1412c = "";
-    public static String ab5421c = "";
-
 
 
     //Khoi tao browser

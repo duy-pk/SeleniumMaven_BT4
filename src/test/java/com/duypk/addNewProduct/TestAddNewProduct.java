@@ -3,6 +3,9 @@ package com.duypk.addNewProduct;
 import com.duypk.common.BaseTest;
 import com.duypk.locator.LocatorCMS;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -65,15 +68,21 @@ public class TestAddNewProduct extends BaseTest {
         sendKey(LocatorCMS.addNewProductColorsSearch,color1);
         sleep(1);
         enter(LocatorCMS.addNewProductColorsSearch);
-        clickElement(LocatorCMS.addNewProductColorsDropdown);
+
+        Actions action = new Actions(driver);
+        action.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
+        sleep(1);
+        action.keyDown(Keys.DELETE).keyUp(Keys.DELETE).build().perform();
         sleep(1);
 
-        clickElement(LocatorCMS.addNewProductColorsDropdown);
         sendKey(LocatorCMS.addNewProductColorsSearch,color2);
         sleep(1);
         enter(LocatorCMS.addNewProductColorsSearch);
         clickElement(LocatorCMS.addNewProductColorsDropdown);
         sleep(1);
+
+        Assert.assertEquals(driver.findElement(By.xpath(LocatorCMS.addNewProductColorsDropdown)).getText(),
+                "2 items selected","Lua chon Color KHONG du so luong");
 
         clickElement(LocatorCMS.addNewProductAttributesDropdown);
         sendKey(LocatorCMS.addNewProductAttributesSearch,attributes);
@@ -87,8 +96,7 @@ public class TestAddNewProduct extends BaseTest {
         sendKey(LocatorCMS.addNewProductDiscountValue,discount);
         clickElement(LocatorCMS.addNewProductDiscountUnit);
         clickElement(LocatorCMS.discountUnitPercent);
-        //sendKey(LocatorCMS.addNewProductQuantity,quantity);
-        //sendKey(LocatorCMS.addNewProductSKU,sku);
+
 
         //Product Description
 
